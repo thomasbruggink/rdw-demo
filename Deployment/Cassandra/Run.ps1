@@ -1,0 +1,1 @@
+docker run -d -m 4g --network nat --name cassandra demo1/cassandra
