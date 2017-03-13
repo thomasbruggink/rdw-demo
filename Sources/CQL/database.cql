@@ -1,6 +1,6 @@
-CREATE KEYSPACE isksdemo1 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+CREATE KEYSPACE rdwdemo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
 
-CREATE TABLE isksdemo1.blogs (
+CREATE TABLE rdwdemo.blogs (
     id timeuuid PRIMARY KEY,
     title text,
     content text,
@@ -8,7 +8,7 @@ CREATE TABLE isksdemo1.blogs (
     date timestamp
 );
 
-CREATE TABLE isksdemo1.users (
+CREATE TABLE rdwdemo.users (
     username text PRIMARY KEY,
     password ascii,
     salt ascii

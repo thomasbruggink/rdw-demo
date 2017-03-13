@@ -122,6 +122,7 @@
     <Content Include="application.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="scripts\ai.1.0.8-build01310.js" />
     <Content Include="scripts\ai.1.0.8-build01310.min.js" />
@@ -140,8 +141,8 @@
     <Content Include="Views\User\Message.cshtml" />
     <Content Include="scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="scripts\jquery-3.1.1.min.map" />
-    <None Include="Views\Blog\Index.cshtml" />
-    <None Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

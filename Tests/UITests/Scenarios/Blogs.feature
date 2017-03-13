@@ -7,17 +7,17 @@ Background:
          | Thomas   |
          | Wiljag   |
 	And The following blogs are created
-		 | Title                       | Content                                                                      | Writer |
-		 | Mijn eerste blog            | Dit is mijn eerste blog!                                                     | Thomas |
-		 | Advances in test automation | In de isks van 2016 gaan we in op advances in test automation binnen knowNow | Wiljag |
+		 | Title                       | Content                                                                             | Writer |
+		 | Mijn eerste blog            | Dit is mijn eerste blog!                                                            | Thomas |
+		 | Advances in test automation | In de rdw-techdays van 2016 is er een showcase over een continuous delivery project | Wiljag |
 
 @blogs
 Scenario: Read a blog
 	Given I look at the 'blog' page
 	Then I see the following blogs
-	| Title                       | Content                                                                      | Writer |
-	| Mijn eerste blog            | Dit is mijn eerste blog!                                                     | Thomas |
-	| Advances in test automation | In de isks van 2016 gaan we in op advances in test automation binnen knowNow | Wiljag |
+	| Title                       | Content                                                                             | Writer |
+	| Mijn eerste blog            | Dit is mijn eerste blog!                                                            | Thomas |
+	| Advances in test automation | In de rdw-techdays van 2016 is er een showcase over een continuous delivery project | Wiljag |
 
 @blogs
 Scenario: When logged in I can create a blog
@@ -33,10 +33,10 @@ Scenario: When logged in I can create a blog
 Scenario: When a user creates a blog other users can read it
 	When I login as 'Thomas'
 	And I create the following blogs
-    | Title     | Content                                   |
-    | ISKS 2016 | Deze blog beschrijft details over de ISKS |
+    | Title     | Content                                                |
+    | ISKS 2016 | Deze blog beschrijft details over de automated testing |
 	And I login as 'Wiljag'
 	And I look at the 'blog' page
 	Then I see the following blogs
-    | Title     | Content                                   | Writer |
-    | ISKS 2016 | Deze blog beschrijft details over de ISKS | Thomas |
+    | Title     | Content                                                | Writer |
+    | ISKS 2016 | Deze blog beschrijft details over de automated testing | Thomas |

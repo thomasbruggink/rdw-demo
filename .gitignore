@@ -236,3 +236,5 @@ _Pvt_Extensions
 .fake/
 
 !Tests\Binaries\chromedriver.exe
+Deployment/Web/Files/Binaries/
+Sources/Demo1/Logs/

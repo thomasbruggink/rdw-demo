@@ -1,0 +1,1 @@
+docker run -d -m 4g --network demo-nat --ip 10.0.0.11 --name elasticsearch demo1/elasticsearch
