@@ -170,6 +170,12 @@
   <PropertyGroup>
     <PostBuildEvent>copy $(SolutionDir)\Binaries\chromedriver.exe $(TargetDir)\chromedriver.exe</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>echo off
+tasklist /fi "imagename eq chromedriver.exe" |find ":" &gt; nul
+if errorlevel 1 taskkill /f /im "chromedriver.exe"
+exit</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

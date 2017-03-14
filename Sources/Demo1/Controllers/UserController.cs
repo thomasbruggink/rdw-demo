@@ -32,6 +32,7 @@ namespace Demo1.Controllers
                 ViewBag.Error = "Invalid username or password";
                 return View("Index");
             }
+            Log.Information("{username} logged in", loginModel.UserName);
             var loginCookie = new HttpCookie("user", user.UserName);
             Response.Cookies.Add(loginCookie);
             ViewBag.Message = $"Welcome {user.UserName}!";
